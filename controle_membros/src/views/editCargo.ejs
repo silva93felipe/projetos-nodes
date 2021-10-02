@@ -1,0 +1,25 @@
+<%- include('includes/head'); %>
+
+    <div class="container col-4 py-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Editar Cargo</h4>
+                
+            </div>
+            <div class="card-body">
+            
+                <form action="/cargo/editar/<%= cargo._id %>" method="POST">
+
+                    <div class="mb-4">
+                        <input value="<%= cargo.nome %>" type="text" class="form-control" placeholder="Nome" name="nome">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a class="btn btn-secondary" href="/cargo/lista" role="button">Voltar</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('includes/footer'); %>

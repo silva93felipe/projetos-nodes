@@ -1,0 +1,29 @@
+<%- include('includes/head'); %>
+
+    <div class="container col-6 py-5">
+        <div class="card-header text-center">
+            <h4 >Pessoas cadastradas</h4>
+            <%- include('includes/messages'); %>
+        </div>
+        <table class="table">
+            <% pessoas.forEach(pessoa=> {%>
+                <tr>
+                    <td>
+                        <%= pessoa.nome %>
+                    </td>
+                    <td>
+                        <%= pessoa.email %>
+                    </td>
+                    <td>
+                        <%= pessoa.telefone %>
+                    </td>
+                    <td><a class="text-primary" href="/cadastro/edit/<%= pessoa._id %>">Editar</a></td>
+                    <td><a class="text-danger" href="/cadastro/delete/<%= pessoa._id %>">Excluir</a></td>
+                </tr>
+                <% }) %>
+        </table>
+        <a class="btn btn-primary" href="/pessoa/index" role="button">Cadastrar</a>
+        <a class="btn btn-secondary" href="/" role="button">Voltar</a>
+    </div>
+
+    <%- include('includes/footer'); %>

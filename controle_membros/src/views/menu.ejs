@@ -1,0 +1,52 @@
+<%- include('includes/head'); %>
+    <div class="container ">
+        <%- include('includes/messages'); %>
+        
+        <ul class="nav nav-tabs my-3">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                    aria-expanded="false">Pessoa</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/pessoa/index">Cadastrar</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/pessoa/lista">Listar</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                    aria-expanded="false">Cargo</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/cargo/index">Cadastrar</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/cargo/lista">Listar</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                    aria-expanded="false">Conjunto</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/conjunto/index">Cadastrar</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/conjunto/lista">Listar</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Sair</a>
+            </li>
+        </ul>
+    </div>
+    
+
+    <%- include('includes/footer'); %>

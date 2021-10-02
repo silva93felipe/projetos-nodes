@@ -1,0 +1,27 @@
+<%- include('includes/head'); %>
+
+    <div class="container col-4 py-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Cadastrar Conjunto</h4>
+                <%- include('includes/messages'); %>
+            </div>
+            <div class="card-body">
+                <form action="/conjunto/editar/<%= conjunto._id %>" method="POST">
+                    <div class="mb-4">
+                        <input value="<%= conjunto.nome%>" type="text" class="form-control" placeholder="Nome" name="nome">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleInputEmail1" class="form-label">Data de Fundação</label>
+                        <input value="<%=conjunto.fundacao %>" type="date" class="form-control" name="fundacao">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <a class="btn btn-secondary" href="/conjunto/lista" role="button">Voltar</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('includes/footer'); %>

@@ -1,0 +1,9 @@
+POST http://localhost:8080/cadastrar
+Content-Type: "application/json"
+
+{
+    "nome": "Energia",
+    "valor": 70.50,
+    "tipo": 1,
+    "situacao": 1
+}
